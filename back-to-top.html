@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcO+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+        <style>
+            #totop {
+            font-size: 18px;
+            color: rgb(209, 209, 209);
+            background-color: transparent;
+            border: 1px solid rgb(209, 209, 209);
+            line-height: 44px;
+            position: fixed;
+            right: 15px;
+            bottom: 100px;
+            display: block;
+            width: 46px;
+            height: 46px;
+            text-decoration: none;
+            text-align: center;
+            box-sizing: border-box;
+            transition: background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out;
+            -webkit-transition: background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out;
+            -moz-transition: background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out;
+            -ms-transition: background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out;
+            -o-transition: background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out;
+        }
+
+        #totop:hover {
+            color: #000;
+            background-color: transparent;
+            border-color: #000;
+        }
+        </style>
+        <script>
+            /** Back To Top button */
+                jQuery(window).scroll(function () {
+                    if (jQuery(this).scrollTop() > 200) {
+                        jQuery('#totop').show();
+                    } else {
+                        jQuery('#totop').hide();
+                    }
+                });
+                jQuery('#totop').click(function () {
+                    jQuery('html,body').animate({ scrollTop: 0 }, 'slow');
+                    return false;
+                });
+        </script>
+    </head>
+    <body>
+        <a href="#" id="totop"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    </body>
+</html>
